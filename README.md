@@ -1,6 +1,5 @@
 # Global-Green-Initiative
 
-
 # Table of Contents
 Preamble
 Product Owner
