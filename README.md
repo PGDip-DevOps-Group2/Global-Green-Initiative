@@ -2,31 +2,32 @@
 
 
 # Table of Contents
-Preamble
-Product Owner
-Rockstars
-Project Deadline
-Project Specification
-Useful Links
-More Information
-Risk Register
-Tenants of Design
-Social Contract
-Meetings
-Communication
-Other
-Branching Strategy
-Estimating Story Points
-Definition of Ready
-Definition of Done
-Preamble
-This is the online repository for the DevOps Assignment.
+- [Preamble](#preamble)
+- [Product Owner](#product-owner)
+- [Rockstars](#rockstars)
+- [Project Deadline](#project-deadline)
+- [Project Specification](#project-specification)
+- [Useful Links](#useful-links)
+- [More Information](#more-information)
+- [Risk Register](#risk-register)
+- [Tenants of Design](#tenants-of-design)
+- [Social Contract](#social-contract)
+- [Meetings](#Meetings)
+- [Communication](#communication)
+- [Other]
+- [Branching Strategy]
+- [Estimating Story Points](#estimating-story-points)
+- [Definition of Ready](#definition-of-ready)
+- [Definition of Done]
+- This is the online repository for the DevOps Assignment.
 
 Each team should fill in the blanks <<>> and add additional content that the team agrees on. This is your contract of work. It is an agreement amongst yourselves. Honour it.
 
 
 <>.
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
+
+## Preamble
 
 # Scrum Master
 <<list week number, student name>>
