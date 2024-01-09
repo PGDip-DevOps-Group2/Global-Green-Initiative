@@ -1,4 +1,4 @@
-# Name of Project
+# Global-Green-Initiative
 
 
 # Table of Contents
@@ -36,7 +36,14 @@ Rotating scrum master so that everyone gets to experience the role once.
 <<List name>> (Permanent)
 
 # Rockstars
-<<list team member names here>>
+1. Abi Bolujo
+2. Andrzej Koeller
+3. Arkadiusz Skopinski
+4. Ciaran Doheny
+5. Michael Dowling
+
+
+
 
 
 # Project Deadline
