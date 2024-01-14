@@ -1,7 +1,5 @@
 package com.group2.GlobalGreenInitiative.entities;
 
-
-
 import jakarta.persistence.*;
 import com.group2.GlobalGreenInitiative.entities.Grant;
 
