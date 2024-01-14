@@ -16,6 +16,6 @@ public class CustomerController {
         Customer aCustomer = new Customer();
 
         model.addAttribute("customer", aCustomer);
-        return "customer/customer";
+        return "customer";
     }
 }
