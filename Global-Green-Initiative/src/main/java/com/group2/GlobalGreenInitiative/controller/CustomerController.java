@@ -29,6 +29,6 @@ public class CustomerController {
     public String createCustomer(Customer customer, Model model) {
         customerRepository.save(customer);
 
-        return "redirect:/Home/new";
+        return "redirect:/homepage/new";
     }
 }
