@@ -20,7 +20,7 @@ public class GrantController {
         Grant aGrant = new Grant();
 
         model.addAttribute("grant", aGrant);
-        return "grant";
+        return "grant/grant";
         }
 
     @PostMapping("/save")

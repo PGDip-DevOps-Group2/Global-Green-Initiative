@@ -22,7 +22,7 @@ public class CustomerController {
         Customer aCustomer = new Customer();
 
         model.addAttribute("customer", aCustomer);
-        return "customer";
+        return "customer/customer";
     }
 
     @PostMapping("/save")
