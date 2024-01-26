@@ -94,6 +94,19 @@ The code framework to be used will be <<>>, we will be programming using the IDE
  
 - <<>>.
 
+# Run Locally
+ - Download or clone the repo to your desktop. 
+ - Open with your IDE, (IntelliJ) 
+ - From IntelliJ in the navbar select “Run” -> “Run ‘GlobalGreenInitiativeApplication’“ this will launch the application. 
+
+  *Now that the application is running you can hit the endpoints from your browser. 
+
+# List of endpoints: 
+  - Homepage: http://localhost:8080/homepage/new 
+  - Grants: http://localhost:8080/grants/new 
+  - Customer: http://localhost:8080/customers/new 
+  - H2-Console(database): http://localhost:8080/h2-console 
+
 # Testing:
     
     
