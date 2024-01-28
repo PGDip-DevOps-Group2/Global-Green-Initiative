@@ -41,6 +41,10 @@ public class Customer {
             return address;
         }
 
+    public String getEmail() {
+        return email;
+    }
+
         public String email() {
             return email;
         }
