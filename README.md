@@ -108,7 +108,14 @@ The code framework to be used will be <<>>, we will be programming using the IDE
   - H2-Console(database): http://localhost:8080/h2-console 
 
 # Testing:
-    
+ #  Unit Testing (Mockito\Junit)
+ - # Test Run
+    - Run every time the codebase builds
+  #  UI e2e Testing (Selenide\Junit)
+ - # Test Run
+    - mvn clean test (on the command line)
+    - Uncomment to run in CI pipeline   //Configuration.headless = true;
+
     
 # Environments:
     staging and production
