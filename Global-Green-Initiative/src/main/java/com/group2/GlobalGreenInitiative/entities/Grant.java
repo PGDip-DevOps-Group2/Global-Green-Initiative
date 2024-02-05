@@ -7,7 +7,7 @@ import com.group2.GlobalGreenInitiative.entities.Grant;
 public class Grant {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long grantId;
 
     private String optionOne;
