@@ -34,6 +34,6 @@ public class CustomerController {
     public String createCustomer(Customer customer, Model model) {
         customerRepository.save(customer);
 
-        return "redirect:/homepage/new";
+        return "redirect:/submitted/new";
     }
 }
