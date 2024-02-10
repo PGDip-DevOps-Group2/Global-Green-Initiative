@@ -7,10 +7,11 @@
 <body>
 
 <nav th:replace="layout :: navbar"></nav>
-
+<div id="background-homepage">
 <div class="container">
   <form action="/customers/save" th:object="${customer}" method="POST" class="col-lg-6 offset-lg-3 ">
-    <h3 style="padding-left: 150px;">Customer Form</h3>
+    <div class="jumbotron wrapper"> <!-- customer-info-box group -->
+    <h3>Customer Form</h3>
     <hr>
     <h4>Customers details</h4>
     <label for="firstName">First name:</label>
@@ -22,12 +23,27 @@
     <label for="address">address:</label>
     <input type="text" id="address" placeholder="Address" th:field="${customer.address}">
     <br><br>
+    <label for="DOB">Email:</label>
+    <input type="text" id="Email" placeholder="Email" th:field="${customer.Email}">
+    <br><br>
     <label for="DOB">Date Of Birth:</label>
     <input type="text" id="DOB" placeholder="DOB" th:field="${customer.DOB}">
     <br><br>
+    <label>
+      <input type="radio" name="gender" value="male"> Male
+    </label>
+
+    <label>
+      <input type="radio" name="gender" value="female"> Female
+    </label>
+    <br><br>
+    <label for="message">Additional Information:</label>
+    <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message"></textarea>
     <hr>
-    <button type="submit">Submit</button>
+    <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+    </div>
   </form>
+</div>
 </div>
 
 </body>

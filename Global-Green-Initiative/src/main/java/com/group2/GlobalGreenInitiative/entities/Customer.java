@@ -14,6 +14,11 @@ public class Customer {
     private String email;
     private String DOB;
 
+    @ManyToOne( cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
+                fetch = FetchType.LAZY)
+    @JoinColumn(name="grant_id")
+    private Grant aGrant;
+
     public Customer() {
     }
 
@@ -43,6 +48,10 @@ public class Customer {
 
     public String getEmail() {
         return email;
+    }
+
+    public Grant getaGrant() {
+        return aGrant;
     }
 
     public String email() {
@@ -77,4 +86,7 @@ public class Customer {
         this.DOB = DOB;
     }
 
+    public void setaGrant(Grant aGrant) {
+        this.aGrant = aGrant;
+    }
 }
