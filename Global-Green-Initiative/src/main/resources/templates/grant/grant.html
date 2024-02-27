@@ -9,11 +9,49 @@
 <nav th:replace="layout :: navbar"></nav>
 <div id="background-homepage">
 <div class="container">
-  <form action="/grants/save" th:object="${grant}" method="POST" th:value="GRANTONE" class="col-lg-6 offset-lg-3 ">
+    <!-- class="col-lg-6 offset-lg-3 -->
+  <form action="/grants/save" th:object="${grant}" method="POST" th:value="GRANTONE">
     <h3 style="padding-left: 150px;">Select A Grant</h3>
     <hr>
-      <div class="row">
-          <div class="jumbotron">
+    <div class="container-body">
+      <div class="container-grants">
+          <div class = "box">
+              <div class="image">
+                  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4435bafd-9e60-4b55-b3c7-b2cf008c805d/da9bjzc-5e743c6f-0e86-4925-933f-c8132f3cc1ff.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ0MzViYWZkLTllNjAtNGI1NS1iM2M3LWIyY2YwMDhjODA1ZFwvZGE5Ymp6Yy01ZTc0M2M2Zi0wZTg2LTQ5MjUtOTMzZi1jODEzMmYzY2MxZmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xmhUMkYwKurBnVe_MdYBsFlqBJiXYkDTamvdQMZIjBw" alt="Lights" style="width:100%">
+              </div>
+              <div class="name">Teto</div>
+              <p>fjidfdifhdshg dsfgjfgjdhf fgjfdhgdfg </p>
+              <div class="btns">
+                  <button>Select</button>
+              </div>
+          </div>
+
+          <div class = "box">
+              <div class="image">
+                  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4435bafd-9e60-4b55-b3c7-b2cf008c805d/da9bjzc-5e743c6f-0e86-4925-933f-c8132f3cc1ff.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ0MzViYWZkLTllNjAtNGI1NS1iM2M3LWIyY2YwMDhjODA1ZFwvZGE5Ymp6Yy01ZTc0M2M2Zi0wZTg2LTQ5MjUtOTMzZi1jODEzMmYzY2MxZmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xmhUMkYwKurBnVe_MdYBsFlqBJiXYkDTamvdQMZIjBw" alt="Lights" style="width:100%">
+              </div>
+              <div class="name">Teto</div>
+              <p>fjidfdifhdshg dsfgjfgjdhf fgjfdhgdfg </p>
+              <div class="btns">
+                  <button>Select</button>
+              </div>
+          </div>
+
+          <div class = "box">
+              <div class="image">
+                  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4435bafd-9e60-4b55-b3c7-b2cf008c805d/da9bjzc-5e743c6f-0e86-4925-933f-c8132f3cc1ff.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ0MzViYWZkLTllNjAtNGI1NS1iM2M3LWIyY2YwMDhjODA1ZFwvZGE5Ymp6Yy01ZTc0M2M2Zi0wZTg2LTQ5MjUtOTMzZi1jODEzMmYzY2MxZmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xmhUMkYwKurBnVe_MdYBsFlqBJiXYkDTamvdQMZIjBw" alt="Lights" style="width:100%">
+              </div>
+              <div class="name">Teto</div>
+              <p>fjidfdifhdshg dsfgjfgjdhf fgjfdhgdfg </p>
+              <div class="btns">
+                  <button>Select</button>
+              </div>
+          </div>
+      </div>
+      </div>
+     <!-- <div class="row">
+
+          <div class="jumbotron item-one">
         <div class="col-md-4 center-content">
               <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4435bafd-9e60-4b55-b3c7-b2cf008c805d/da9bjzc-5e743c6f-0e86-4925-933f-c8132f3cc1ff.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ0MzViYWZkLTllNjAtNGI1NS1iM2M3LWIyY2YwMDhjODA1ZFwvZGE5Ymp6Yy01ZTc0M2M2Zi0wZTg2LTQ5MjUtOTMzZi1jODEzMmYzY2MxZmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xmhUMkYwKurBnVe_MdYBsFlqBJiXYkDTamvdQMZIjBw" alt="Lights" style="width:100%">
                   <label>
@@ -22,7 +60,8 @@
               <p>Lorem ipsum...</p>
         </div>
           </div>
-          <div class="jumbotron">
+
+          <div class="jumbotron item-two">
           <div class="col-md-4">
               <img src="https://static.tildacdn.com/tild6230-3332-4562-a164-313265626562/Nausicaa.png" alt="Lights" style="width:100%">
 
@@ -34,8 +73,7 @@
           </div>
           </div>
 
-    </div>
-      <button type="submit"  class="btn btn-primary" >Next</button>
+    </div> -->
   </form>
 </div>
 </div>
