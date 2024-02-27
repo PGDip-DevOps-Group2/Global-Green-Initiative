@@ -2,26 +2,35 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="layout :: header"></head>
+<head th:replace="layout :: header">
+
+
+</head>
 
 <body>
-
+<div id="background-homepage">
 <nav th:replace="layout :: navbar"></nav>
 
-<div class="container">
-  <form action="#" th:object="${homepage}" class="col-lg-6 offset-lg-3 ">
-    <div class="jumbotron">
-      <h1 class="display-3">Group 2</h1>
+<div class="home"  >
+  <form action="#" th:object="${homepage}" > <!-- class="col-md-6 offset-md-3" -->
+    <div class="jumbotron wrapper" id="group">
+      <!--  <div class="jumbotron "> blue-box -->
+      <h1 class="display-3 cursive-text">Group 2</h1>
       <p class="lead">Nausicaä’s Global Green Initiative</p>
       <hr class="my-4">
       <p>An online application system for range of grants to support climate change initiatives. This is part of Studio Ghibli’s sustainable planet goals.</p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" th:href="@{/grants/new}" role="button">Apply</a>
-      </p>
+      <div class="move">
+      <a class="btn btn-primary btn-lg" th:href="@{/grants/new}" role="button" >Apply</a>
+      </div>
     </div>
   </form>
+  <div class="home-img">
+    <img src="/image/homepage.png">
+  </div>
 </div>
 
+
+</div>
 </body>
 
 </html>

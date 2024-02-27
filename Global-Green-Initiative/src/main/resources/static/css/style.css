@@ -1,0 +1,159 @@
+body {
+    overflow-x: hidden;
+}
+
+#background-homepage {
+/*width: 100vw;
+height: 100vh; */
+
+background-image: url('/image/Background.png');
+height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+/*Homepage*/
+.home {
+    position: relative;
+    width: 100%
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10% 10% 0;
+    margin-top: 20px;
+
+}
+
+.home-img img {
+    max-width: 750px;
+    margin-right: -20px;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.wrapper {
+    width:600px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255, -2);
+    backdrop-filter: blur(20px);
+    box-shadow; 0 0 10px rgbs(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    /*padding: 30px 40px;*/
+
+}
+/*
+#group {
+opacity: 0.9;
+min-height: 60vh;
+margin-top: 20%;
+}
+*/
+.vertical-center {
+margin: auto;
+text-align: center;
+position: absolute;
+margin-top: 20%;
+}
+
+
+.move{
+    align-items: center;
+}
+
+.blue-box{
+background-color: rgba(0, 128, 0, 0.5);
+}
+
+customer-info-box{
+margin-top: 10%;
+}
+
+/*
+    grant
+*/
+.container-body{
+    display: grid;
+    height: 100%;
+    place-item:center;
+    backdrop-filter: blur(20px);
+
+}
+
+.container-grants{
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.container-grants .box{
+    width: calc(33% - 10px);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+
+.box .name{
+    margin: 10px 0 3px 0;
+    color: #8e44ad;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.box .image{
+    margin: 10px 0;
+    height: 150px;
+    width: 150px;
+    /*background: #8e44ad; background: transparent;*/
+    backdrop-filter: blur(20px);
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+
+}
+
+.box .p{
+    text-align: justify;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.item-one {
+    position: relative;
+    top: 100px;
+    right: 100px;
+}
+
+.item-two {
+    position: relative;
+    top: 100px;
+    left: 100px
+}

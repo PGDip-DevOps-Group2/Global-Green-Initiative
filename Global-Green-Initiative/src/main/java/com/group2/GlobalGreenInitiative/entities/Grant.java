@@ -3,15 +3,20 @@ package com.group2.GlobalGreenInitiative.entities;
 import jakarta.persistence.*;
 import com.group2.GlobalGreenInitiative.entities.Grant;
 
+import java.util.List;
+
 @Entity
 public class Grant {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long grantId;
 
     private String optionOne;
     private String optionTwo;
+
+    @OneToMany(mappedBy="aGrant")
+    private List<Customer> customer;
 
     public Grant() {
     }
@@ -33,6 +38,10 @@ public class Grant {
         return optionTwo;
     }
 
+    public List<Customer> getCustomer() {
+        return customer;
+    }
+
     public void setGrantId(long grantId) {
         this.grantId = grantId;
     }
@@ -43,5 +52,9 @@ public class Grant {
 
     public void setOptionTwo(String optionTwo) {
         this.optionTwo = optionTwo;
+    }
+
+    public void setCustomer(List<Customer> customer) {
+        this.customer = customer;
     }
 }

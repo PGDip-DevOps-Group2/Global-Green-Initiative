@@ -5,76 +5,88 @@ import jakarta.persistence.*;
 @Entity
 public class Customer {
 
-        @Id
-        @GeneratedValue(strategy= GenerationType.AUTO)
-        private long projectId;
-        private String firstname;
-        private String lastname;
-        private String address;
-        private String email;
-        private String DOB;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long projectId;
+    private String firstname;
+    private String lastname;
+    private String address;
+    private String email;
+    private String DOB;
 
-        public Customer() {
-        }
+    @ManyToOne( cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
+                fetch = FetchType.LAZY)
+    @JoinColumn(name="grant_id")
+    private Grant aGrant;
 
-        public Customer(String firstname, String lastname, String address, String email, String DOB) {
-            this.firstname = firstname;
-            this.lastname = lastname;
-            this.address = address;
-            this.email =email;
-            this.DOB = DOB;
-        }
+    public Customer() {
+    }
 
-        public long getProjectId() {
-            return projectId;
-        }
+    public Customer(String firstname, String lastname, String address, String email, String DOB) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.address = address;
+        this.email = email;
+        this.DOB = DOB;
+    }
 
-        public String getFirstname() {
-            return firstname;
-        }
+    public long getProjectId() {
+        return projectId;
+    }
 
-        public String getLastname() {
-            return lastname;
-        }
+    public String getFirstname() {
+        return firstname;
+    }
 
-        public String getAddress() {
-            return address;
-        }
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getAddress() {
+        return address;
+    }
 
     public String getEmail() {
         return email;
     }
 
-        public String email() {
-            return email;
-        }
+    public Grant getaGrant() {
+        return aGrant;
+    }
 
-        public String getDOB() {
-            return DOB;
-        }
+    public String email() {
+        return email;
+    }
 
-        public void setProjectId(long projectId) {
-            this.projectId = projectId;
-        }
+    public String getDOB() {
+        return DOB;
+    }
 
-        public void setFirstname(String firstname) {
-            this.firstname = firstname;
-        }
+    public void setProjectId(long projectId) {
+        this.projectId = projectId;
+    }
 
-        public void setLastname(String lastname) {
-            this.lastname = lastname;
-        }
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
 
-        public void setAddress(String address) {
-            this.address = address;
-        }
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
 
-        public void setEmail(String email) {
-            this.email = email;
-        }
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-        public void setDOB(String DOB) {
-            this.DOB = DOB;
-        }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
+    public void setDOB(String DOB) {
+        this.DOB = DOB;
+    }
+
+    public void setaGrant(Grant aGrant) {
+        this.aGrant = aGrant;
+    }
 }

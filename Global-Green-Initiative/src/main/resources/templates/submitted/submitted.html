@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout :: header">
+
+
+</head>
+
+<body>
+<div id="background-homepage">
+<nav th:replace="layout :: navbar"></nav>
+
+<div class="container"  >
+  <form action="#" th:object="${homepage}" class="col-md-6 offset-md-3" >
+    <div class="jumbotron" id="group">
+      <div class="jumbotron blue-box">
+      <h1 class="display-3 cursive-text">Submitted</h1>
+      </div>
+      <hr class="my-4">
+      <p>thanks you for submitting your application</p>
+
+      <p class="lead" >
+      <div class="vertical-center button-center">
+        <a class="btn btn-primary btn-lg" th:href="@{/homepage/new}" role="button" >Return Home</a>
+      </div>
+      </p>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+
+</html>
