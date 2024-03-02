@@ -27,10 +27,16 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 
 # Scrum Master
 <<list week number, student name>>
-20/1/24 - 
-27/1/24 - 
-03/2/24 - 
-10/2/24 - 
+20/1/24 - Ciaran
+27/1/24 - Abi
+03/2/24 - Arkadiusz
+10/2/24 - Michael
+17/2/24 - Andrzej
+24/2/24 - Ciaran
+02/3/24 - Abi
+09/3/24 - Arkadiusz
+16/3/24 - Michael
+23/3/24 - Andrzej
 
 # Product Owner
 Ciaran Doheny (Permanent)
@@ -67,27 +73,27 @@ Regex for cleansing and validation of data before sending it to the database.
  - Confluence space: https://cidoatu.atlassian.net/wiki/spaces/NE/
 
 # More Information
-For more information, visit our other sections
+For more information, visit our confluence space
 
 # Section	Description
-Process	Describes the company process
-Project Log	Log of project activities
+Process     https://cidoatu.atlassian.net/wiki/spaces/NE/pages/851981/Team+Processes
+Project Log	    Log of project activities
 Costings	Overview of the project cost
-Architecture	Outlines the architecture
+Architecture	https://cidoatu.atlassian.net/wiki/spaces/NE/pages/1998857/Architecture
 Environments	Overview of the environment set-up
 DR Plan	Disaster Recovery Plan and procedures
-Requirements	Overview of the requirements for the project
+Requirements	https://cidoatu.atlassian.net/jira/software/c/projects/NE/boards/4
 SLAs	Service level agreements
-Risk Management	How we manage risk
-Security	Overview of security
-Project Log	Team log for the project
+Risk Management	https://cidoatu.atlassian.net/wiki/spaces/NE/pages/15925282/Risk+Register
+Security	https://cidoatu.atlassian.net/wiki/spaces/NE/pages/1933329/Security
+
 
 # Risk Register
-These are the current Risks on the project, re-aligned on a weekly basis
+Located in Confluence - https://cidoatu.atlassian.net/wiki/spaces/NE/pages/15925282/Risk+Register
 
 
 # Tenants of Design
-The code framework to be used will be <<>>, we will be programming using the IDE << >>
+The code framework to be used will be <<>>, we will be programming using the IDE visual studio code
 
 # Security:
 - << >>: uses static analysis to find bugs in code. 
@@ -111,7 +117,7 @@ The code framework to be used will be <<>>, we will be programming using the IDE
  #  Unit Testing (Mockito\Junit)
  - # Test Run
     - Run every time the codebase builds
-  #  UI e2e Testing (Selenide\Junit)
+ #  UI e2e Testing (Selenide\Junit)
  - # Test Run
     - mvn clean test (on the command line)
     - Uncomment to run in CI pipeline   //Configuration.headless = true;
@@ -128,6 +134,7 @@ The code framework to be used will be <<>>, we will be programming using the IDE
     version/release management
 
 # Agile project management methods/principles (jira)
+    https://cidoatu.atlassian.net/wiki/spaces/NE/pages/4522020/Agile+Process
 
 # Social Contract
     Mobile phones be left on silent during sprint sessions and class time.
@@ -143,14 +150,13 @@ The code framework to be used will be <<>>, we will be programming using the IDE
     Use Agile methodologies in the project at all times.
 
 # Meetings
-Stand-ups will occur every Friday and <<day/time>> using an Automated bot. Two per week.
-The order in which people give their updates will be << >>.
+Stand-ups will occur every Friday on teams and Monday using an Automated bot. Two per week.
 Updates will be in the form: What I've done, Impediments, What I plan to do.
 Sprint planning will occur after standup on Friday every week.
 Please add and update items within Jira prior to the sprint planning session.
-Sprint retro will be held every 2 weeks (timebox retro for 15 minutes, to be organised by the scrum master).
+Sprint retro will be held every 3 weeks (timebox retro for 30 minutes, to be organised by the scrum master).
 Points raised in the sprint retro will be noted and posted on the Slack channel by the Scrum Master. The Scrum Master is rotated per team member every week.
-Backlog refinement will happen on <<date/time>> during our sprint.
+Backlog refinement will happen on after each Friday standup.
 Task estimation will be done using t shirt sizing. 
 Come prepared for meetings.
 Be on time for stand-ups and meetings.
@@ -188,9 +194,7 @@ Each member of the team will work approximately 3 hours per week unless they are
 Our branching strategy will ?????
 
 # Estimating Story Points
-The team's velocity is calculated by <<Team decides>>.
 
-The team's current story point velocity is "N/A".
 
-# Definition of Ready
-<<List criteria that are common here>>
+# Definition of Ready & Done
+https://cidoatu.atlassian.net/wiki/spaces/NE/pages/15859742/Definition+of+Ready+Done
