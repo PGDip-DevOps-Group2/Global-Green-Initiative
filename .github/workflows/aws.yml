@@ -7,7 +7,7 @@ on:
 jobs:
   deploy:
     name: Deploy Nausicaa
-    runs-on: ubuntu-latest
+    runs-on: al2023-ami-2023.3.20240304.0-kernel-6.1-x86_64
 
     steps:    
     - name: Checkout code
