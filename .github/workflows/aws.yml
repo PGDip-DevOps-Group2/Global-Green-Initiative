@@ -1,0 +1,51 @@
+name: Deploy to Amazon EC2
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  AWS_REGION: MY_AWS_REGION                   # set this to your preferred AWS region, e.g. us-west-1
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy Nausicaa
+    runs-on: self-hosted
+    container:
+    # thisa image already contain preinstalled JDK
+      image: AMI-Nausicaa-Java
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Java paths
+      # Since Java is already installed on the custom AMI, no need to install it again.
+      run: |
+        export JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
+        export PATH=$JAVA_HOME/bin:$PATH
+    
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+
+    - name: Copy artifact to EC2
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source: 'target/your-application.jar'
+        target: '/path/to/destination/your-application.jar'
+
+    - name: SSH into EC2 and restart application
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          sudo systemctl restart your-application.service
+
