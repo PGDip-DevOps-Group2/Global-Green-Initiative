@@ -7,7 +7,7 @@ on:
 jobs:
   deploy:
     name: Deploy Nausicaa
-    runs-on: al2023-ami-2023.3.20240304.0-kernel-6.1-x86_64
+    runs-on: ami-0fc3317b37c1269d3
 
     steps:    
     - name: Checkout code
