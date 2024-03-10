@@ -7,7 +7,7 @@ on:
 jobs:
   deploy:
     name: Deploy Nausicaa
-    runs-on: ami-0fc3317b37c1269d3
+    runs-on: ubuntu-latest
 
     steps:    
     - name: Checkout code
@@ -15,7 +15,7 @@ jobs:
 
     - name: Set up Java
       run: |
-        sudo yum install java-21-amazon-corretto-headless.x86_64 -y
+        sudo apt install default-jdk -y
         export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
         export PATH=$JAVA_HOME/bin:$PATH
 
