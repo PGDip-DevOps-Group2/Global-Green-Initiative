@@ -41,7 +41,7 @@ jobs:
             context: .
             file: ./Dockerfile
             push: true
-            tags: global-green-initiative:latest
+            tags: l00186464/global-green-initiative:latest
 
   deploy:
     needs: build
