@@ -19,6 +19,7 @@ jobs:
       - name: Build with Maven
         run: |
               mvn -f Global-Green-Initiative/pom.xml clean install
+              ls
               mkdir artifacts && cp target/*.jar artifacts
               cd artifacts && ls
       - name: Save artifact
