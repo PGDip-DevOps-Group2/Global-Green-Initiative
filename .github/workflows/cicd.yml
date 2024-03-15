@@ -20,7 +20,7 @@ jobs:
         run: |
               mvn -f Global-Green-Initiative/pom.xml clean install
               ls
-              mkdir artifacts && cp target/*.jar artifacts
+              mkdir artifacts && cp *.jar artifacts
               cd artifacts && ls
       - name: Save artifact
         uses: actions/upload-artifact@v2
