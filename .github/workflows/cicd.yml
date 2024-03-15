@@ -48,8 +48,8 @@ jobs:
     runs-on: [aws-ec2]
     steps:
       - name: Pull image from docker hub
-        run: docker pull l00186464/global-green-initiative:latest
+        run: sudo docker pull l00186464/global-green-initiative:latest
       - name: Remove old container
-        run: docker rm -f global-green-initiative-container
+        run: sudo docker rm -f global-green-initiative-container
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name global-green-initiative-container global-green-initiative
+        run: sudo docker run -d -p 8080:8080 --name global-green-initiative-container global-green-initiative
