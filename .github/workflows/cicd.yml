@@ -1,0 +1,37 @@
+name: CICD
+
+on:
+  push:
+    branches: [deploy-to-ec2]
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Build with Maven
+        run: mvn -f Global-Green-Initiative/pom.xml clean install
+      - name: Login to docker hub
+        run: docker login -u ${{secrets.DOCKER_HUB_USERNAME}} -p {{secrets.DOCKER_HUB_ACCESS_TOKEN}}
+      - name: Build docker image
+        run: docker build -t GlobalGreenInitiative .
+      - name: Publish to docker hub
+        run: docker push GlobalGreenInitiative:latest
+
+  deploy:
+    needs: build
+    runs-on: [aws-ec2]
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull GlobalGreenInitiative:latest
+      - name: Remove old container
+        run: docker rm -f GlobalGreenInitiative-container
+      - name: Run docker container
+        run: docker run -d -p 8080:8080 --name GlobalGreenInitiative-container GlobalGreenInitiative
