@@ -138,6 +138,10 @@ margin-top: 10%;
     padding: 20px;
 }
 
+.agree{
+    margin-bottom: 20px;
+}
+
 .container-grants .box{
     width: calc(33% - 10px);
     background: #fff;
@@ -149,7 +153,7 @@ margin-top: 10%;
     border-radius: 5px;
 }
 
-.box .name{
+.box .grant-name{
     margin: 10px 0 3px 0;
     color: #8e44ad;
     font-size: 18px;

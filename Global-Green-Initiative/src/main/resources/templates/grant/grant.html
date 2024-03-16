@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 
 <head th:replace="layout :: header"></head>
 
@@ -15,18 +15,53 @@
     <h3 style="padding-left: 150px;">Select A Grant</h3>
     <div class="container-body">
       <div class="container-grants">
+          <!-- Grant One -->
           <div class = "box">
               <div class="image">
                   <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4435bafd-9e60-4b55-b3c7-b2cf008c805d/da9bjzc-5e743c6f-0e86-4925-933f-c8132f3cc1ff.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ0MzViYWZkLTllNjAtNGI1NS1iM2M3LWIyY2YwMDhjODA1ZFwvZGE5Ymp6Yy01ZTc0M2M2Zi0wZTg2LTQ5MjUtOTMzZi1jODEzMmYzY2MxZmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xmhUMkYwKurBnVe_MdYBsFlqBJiXYkDTamvdQMZIjBw" alt="Lights" style="width:100%">
               </div>
-              <div class="name">Teto</div>
-              <p>Hello World</p>
+              <div class="grant-name">Teto Community Engagement Grant</div>
+              <h3></h3>
+              <p>The Teto grant focuses on initiatives that prioritize community engagement and collaboration in environmental conservation efforts.</p>
 
-              <div class="btns">
-
-                  <input type="checkbox" th:field="${grant.optionOne}" th:value="10000" />
-                  <button type="submit">Submit</button>
+              <div>
+                  <input type="checkbox" id="tandc" name="tandc" th:field="${grant.optionOne}" th:value="10000"/>
+                  <label for="tandc">Agree to Terms and Conditions</label>
               </div>
+
+              <button type="submit" class="btn btn-secondary btn-sm btn-block" th:href="@{/customers/new}" role="button" ><span class="button-text">Select</button>
+          </div>
+          <!-- Grant Two -->
+          <div class = "box">
+              <div class="image">
+                  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4435bafd-9e60-4b55-b3c7-b2cf008c805d/da9bjzc-5e743c6f-0e86-4925-933f-c8132f3cc1ff.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ0MzViYWZkLTllNjAtNGI1NS1iM2M3LWIyY2YwMDhjODA1ZFwvZGE5Ymp6Yy01ZTc0M2M2Zi0wZTg2LTQ5MjUtOTMzZi1jODEzMmYzY2MxZmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xmhUMkYwKurBnVe_MdYBsFlqBJiXYkDTamvdQMZIjBw" alt="Lights" style="width:100%">
+              </div>
+              <div class="grant-name">Ohmu Impact Grant</div>
+              <h3></h3>
+              <p>The Ohmu grant aims to fund projects with significant potential impact in mitigating climate change and promoting sustainability on a large scale.</p>
+
+              <div>
+                  <input type="checkbox" id="tandc" name="tandc" th:field="${grant.optionOne}" th:value="10000"/>
+                  <label for="tandc">Agree to Terms and Conditions</label>
+              </div>
+
+              <button type="submit" class="btn btn-secondary btn-sm btn-block" th:href="@{/customers/new}" role="button" ><span class="button-text">Select</button>
+          </div>
+          <!-- Grant Three -->
+          <div class = "box">
+              <div class="image">
+                  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4435bafd-9e60-4b55-b3c7-b2cf008c805d/da9bjzc-5e743c6f-0e86-4925-933f-c8132f3cc1ff.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ0MzViYWZkLTllNjAtNGI1NS1iM2M3LWIyY2YwMDhjODA1ZFwvZGE5Ymp6Yy01ZTc0M2M2Zi0wZTg2LTQ5MjUtOTMzZi1jODEzMmYzY2MxZmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xmhUMkYwKurBnVe_MdYBsFlqBJiXYkDTamvdQMZIjBw" alt="Lights" style="width:100%">
+              </div>
+              <div class="grant-name">Nausicaä Innovation Grant.</div>
+              <h3></h3>
+              <p>This grant supports projects showcasing innovative approaches or technologies to address pressing environmental challenges.</p>
+
+              <div>
+                  <input type="checkbox" id="tandc" name="tandc" th:field="${grant.optionOne}" th:value="10000"/>
+                  <label for="tandc">Agree to Terms and Conditions</label>
+              </div>
+
+              <button type="submit" class="btn btn-secondary btn-sm btn-block" th:href="@{/customers/new}" role="button" ><span class="button-text">Select</button>
           </div>
       </div>
       </div>
