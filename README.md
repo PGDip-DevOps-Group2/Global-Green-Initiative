@@ -121,8 +121,9 @@ The code framework to be used will be <<>>, we will be programming using the IDE
  - # Test Run
     - mvn clean test (on the command line)
     - Uncomment to run in CI pipeline   //Configuration.headless = true;
-
-    
+# Static code check
+   - Sonar run
+     
 # Environments:
     staging and production
     tight configuration management for consistency and reproducibility
