@@ -15,19 +15,22 @@ class GrantTest {
         grant.setOptionOne("Option One");
         grant.setOptionTwo("Option Two");
 
+
         // Assert
         assertEquals(1L, grant.getGrantId());
         assertEquals("Option One", grant.getOptionOne());
         assertEquals("Option Two", grant.getOptionTwo());
+
     }
 
     @Test
     void testParameterizedConstructor() {
         // Arrange
-        Grant grant = new Grant("Option One", "Option Two");
+        Grant grant = new Grant("Option One", "Option Two", "Option Three");
 
         // Assert
         assertEquals("Option One", grant.getOptionOne());
         assertEquals("Option Two", grant.getOptionTwo());
+
     }
 }
