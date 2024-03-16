@@ -25,7 +25,6 @@ jobs:
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: Cache Maven packages
-          run: cd Global-Green-Initiative
         uses: actions/cache@v3
         with:
           path: ~/.m2
