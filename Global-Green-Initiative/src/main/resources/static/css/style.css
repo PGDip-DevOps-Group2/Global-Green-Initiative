@@ -50,6 +50,18 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     color: transparent;
 }
 
+.title{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: underline #f2f3f4;
+    font-size: 30px;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 .logo {
     font-family: 'Poppins', sans-serif;
     text-decoration: underline overline #f2f3f4;
@@ -123,10 +135,10 @@ margin-top: 10%;
     grant
 */
 .container-body{
-    display: grid;
-
+    margin-top: 6%;
+    position: absolute;
     place-item:center;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
 
 }
 
@@ -144,7 +156,7 @@ margin-top: 10%;
 
 .container-grants .box{
     width: calc(33% - 10px);
-    background: #fff;
+    background: #F9F6EE;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,9 +165,20 @@ margin-top: 10%;
     border-radius: 5px;
 }
 
+.money{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 .box .grant-name{
     margin: 10px 0 3px 0;
-    color: #8e44ad;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    font-weight: bold;
+    color: ##696969;
     font-size: 18px;
     font-weight: 600;
 
