@@ -122,7 +122,7 @@ The code framework to be used will be <<>>, we will be programming using the IDE
     - mvn clean test (on the command line)
     - Uncomment to run in CI pipeline   //Configuration.headless = true;
 # Static code check
-   - Sonar run
+   - Sonarcloud run
      
 # Environments:
     staging and production
