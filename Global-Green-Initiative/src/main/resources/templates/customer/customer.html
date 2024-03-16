@@ -9,26 +9,32 @@
 <nav th:replace="layout :: navbar"></nav>
 <div id="background-homepage">
 <div class="container">
-  <form action="/customers/save" th:object="${customer}" method="POST" class="col-lg-6 offset-lg-3 ">
+  <form action="/customers/save" th:object="${customer}" method="POST" class="col-lg-6 offset-lg-3 form">
     <div class="jumbotron wrapper"> <!-- customer-info-box group -->
     <h3>Customer Form</h3>
-    <hr>
-    <h4>Customers details</h4>
+
+    <div class="input-box">
     <label for="firstName">First name:</label>
     <input type="text" id="firstName" placeholder="First Name" th:field="${customer.firstname}" >
-    <br><br>
+    </div>
+
+    <div class="input-box">
     <label for="lastName">Last name:</label>
     <input type="text" id="lastName" placeholder="Last Name" th:field="${customer.lastname}">
-    <br><br>
+    </div>
+
+    <div class="input-box">
     <label for="address">address:</label>
     <input type="text" id="address" placeholder="Address" th:field="${customer.address}">
-    <br><br>
+    </div>
+    <div class="input-box">
     <label for="DOB">Email:</label>
     <input type="text" id="Email" placeholder="Email" th:field="${customer.Email}">
+    </div>
     <br><br>
     <label for="DOB">Date Of Birth:</label>
     <input type="text" id="DOB" placeholder="DOB" th:field="${customer.DOB}">
-    <br><br>
+
     <label>
       <input type="radio" name="gender" value="male"> Male
     </label>

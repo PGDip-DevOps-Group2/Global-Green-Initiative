@@ -8,6 +8,7 @@
 
 <nav th:replace="layout :: navbar"></nav>
 <div id="background-homepage">
+
 <div class="container">
     <!-- class="col-lg-6 offset-lg-3 -->
   <form action="/grants/save" th:object="${grant}" method="POST" th:value="GRANTONE">
@@ -57,9 +58,5 @@
   </form>
 </div>
 </div>
-
-<hr>
-
-
 </body>
 </html>
