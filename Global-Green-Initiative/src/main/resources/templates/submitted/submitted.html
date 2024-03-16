@@ -8,26 +8,20 @@
 </head>
 
 <body>
-<div id="background-homepage">
 <nav th:replace="layout :: navbar"></nav>
-
-<div class="container"  >
-  <form action="#" th:object="${homepage}" class="col-md-6 offset-md-3" >
-    <div class="jumbotron" id="group">
-      <div class="jumbotron blue-box">
-      <h1 class="display-3 cursive-text">Submitted</h1>
+<div id="background-homepage">
+  <div class="center-form">
+    <div class="container-form">
+      <h3 class="title">Congratulations! Grant Submitted</h3>
+      <div class="content">
+        <form action="#" th:object="${homepage}">
+            <p class="submit-text">Thank you for submitting your grant request to Nausicaä’s Global Green Initiative! We appreciate your dedication to environmental stewardship and your commitment to making a positive impact on our planet. Rest assured, your proposal is in good hands, and we will carefully review it. Stay tuned for updates, and thank you again for your contribution to a greener, healthier future for all.</p>
+          <a type="submit" class="btn btn-secondary btn-md btn-block" th:href="@{/homepage/new}" role="button" ><span class="button-text">Home</span></a>
+        </form>
       </div>
-      <hr class="my-4">
-      <p>thanks you for submitting your application</p>
-
-      <p class="lead" >
-      <div class="vertical-center button-center">
-        <a class="btn btn-primary btn-lg" th:href="@{/homepage/new}" role="button" >Return Home</a>
-      </div>
-      </p>
     </div>
-  </form>
-</div>
+  </div>
+
 </div>
 </body>
 

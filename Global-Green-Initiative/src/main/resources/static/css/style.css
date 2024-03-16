@@ -1,4 +1,4 @@
-html, body {margin: 0; height: 100%; overflow: hidden}
+/*html, body {margin: 0; height: 100%; overflow: hidden}*/
 
 /*Homepage*/
 .home {
@@ -147,6 +147,7 @@ margin-top: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-items: center;
     padding: 20px;
 }
 
@@ -227,7 +228,7 @@ margin-top: 10%;
 }
 
 .input-box label {
-    color: #333;
+    color: #f2f3f4;
 }
 
 .form .input-box input{
@@ -240,5 +241,31 @@ margin-top: 10%;
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: 0 15px;
+}
+
+.center-form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.container-form{
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  backdrop-filter: blur(50px);
+}
+
+.submit-text{
+    font-family: 'Poppins', sans-serif;
+    color: #f2f3f4;
 
 }
+
+
+
+
