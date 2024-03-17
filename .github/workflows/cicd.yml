@@ -53,4 +53,4 @@ jobs:
       - name: Remove old container
         run: sudo docker rm -f global-green-initiative-container
       - name: Run docker container
-        run: sudo docker run -d -p 8080:8080 --name global-green-initiative-container l00186464/global-green-initiative
+        run: sudo docker run -d --restart always -p 8080:8080 --name global-green-initiative-container l00186464/global-green-initiative
