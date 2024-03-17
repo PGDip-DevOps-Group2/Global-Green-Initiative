@@ -12,7 +12,13 @@ public class Customer {
     private String lastname;
     private String address;
     private String email;
-    private String DOB;
+
+    private boolean requirementOne;
+
+    private boolean requirementTwo;
+
+    private boolean requirementThree;
+
 
     @ManyToOne( cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
                 fetch = FetchType.LAZY)
@@ -22,12 +28,23 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String firstname, String lastname, String address, String email, String DOB) {
+    public Customer(String firstname, String lastname, String address, String email, boolean requirementOne, boolean requirementTwo, boolean requirementThree) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
         this.email = email;
-        this.DOB = DOB;
+        this.requirementOne = requirementOne;
+        this.requirementTwo = requirementTwo;
+        this.requirementThree = requirementThree;
+    }
+
+    public Customer(String firstname, String lastname, String address, String email) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.address = address;
+        this.email = email;
+
+
     }
 
     public long getProjectId() {
@@ -58,8 +75,16 @@ public class Customer {
         return email;
     }
 
-    public String getDOB() {
-        return DOB;
+    public boolean getRequirementOne() {
+        return requirementOne;
+    }
+
+    public boolean getRequirementTwo() {
+        return requirementTwo;
+    }
+
+    public boolean getRequirementThree() {
+        return requirementThree;
     }
 
     public void setProjectId(long projectId) {
@@ -82,11 +107,19 @@ public class Customer {
         this.email = email;
     }
 
-    public void setDOB(String DOB) {
-        this.DOB = DOB;
-    }
-
     public void setaGrant(Grant aGrant) {
         this.aGrant = aGrant;
+    }
+
+    public void setRequirementOne(boolean requirementOne) {
+        this.requirementOne = requirementOne;
+    }
+
+    public void setRequirementTwo(boolean requirementTwo) {
+        this.requirementTwo = requirementTwo;
+    }
+
+    public void setRequirementThree(boolean requirementThree) {
+        this.requirementThree = requirementThree;
     }
 }

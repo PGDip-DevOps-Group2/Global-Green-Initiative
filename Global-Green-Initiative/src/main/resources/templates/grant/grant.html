@@ -27,11 +27,11 @@
               <p>The Ohmu grant aims to fund projects with significant potential impact in mitigating climate change and promoting sustainability on a large scale.</p>
 
               <div>
-                  <input type="checkbox" id="tandc" name="tandc" th:field="${grant.optionOne}" th:value="7000"/>
-                  <label for="tandc">Agree to Terms and Conditions</label>
+                  <input type="checkbox" id="tandc1" name="tandc1" onclick="enableOne()" th:field="${grant.optionOne}" th:value="7000"/>
+                  <label for="tandc1">Agree to Terms and Conditions</label>
               </div>
 
-              <button disabled="true" type="submit" class="btn btn-secondary btn-sm btn-block" th:href="@{/customers/new}" role="button" ><span class="button-text">Select</span></button>
+              <button disabled="true" type="submit" id="btnOne" class="btn btn-secondary btn-sm btn-block " th:href="@{/customers/new}" role="button" ><span class="button-text">Select</span></button>
           </div>
 
           <!-- Grant Two -->
@@ -44,11 +44,11 @@
               <p>The Teto grant focuses on initiatives that prioritize community engagement and collaboration in environmental conservation efforts.</p>
 
               <div>
-                  <input type="checkbox" id="tandc2" name="tandc2"  th:field="${grant.optionTwo}" th:value="10000"/>
+                  <input type="checkbox" id="tandc2" name="tandc2" onclick="enableTwo()" th:field="${grant.optionTwo}" th:value="10000"/>
                   <label for="tandc2">Agree to Terms and Conditions</label>
               </div>
 
-              <button type="submit" id="btn" class="btn btn-secondary btn-sm btn-block" th:href="@{/customers/new}" role="button" ><span class="button-text">Select</span></button>
+              <button disabled="true" type="submit" id="btnTwo" class="btn btn-secondary btn-sm btn-block" th:href="@{/customers/new}" role="button" ><span class="button-text">Select</span></button>
           </div>
 
           <!-- Grant Three -->
@@ -61,11 +61,11 @@
               <p>This grant supports projects showcasing innovative approaches or technologies to address pressing environmental challenges.</p>
 
               <div>
-                  <input type="checkbox" id="tandc3" name="tandc3" th:field="${grant.optionThree}" th:value="25000"/>
+                  <input type="checkbox" id="tandc3" name="tandc3" onclick="enableThree()" th:field="${grant.optionThree}" th:value="25000"/>
                   <label for="tandc3">Agree to Terms and Conditions</label>
               </div>
 
-              <button disabled="true" type="submit" class="btn btn-secondary btn-md btn-block" th:href="@{/customers/new}" role="button" ><span class="button-text">Select</span></button>
+              <button disabled="true" type="submit" id="btnThree" class="btn btn-secondary btn-md btn-block" th:href="@{/customers/new}" role="button" ><span class="button-text">Select</span></button>
           </div>
       </div>
       </div>
@@ -74,15 +74,35 @@
 </div>
 </body>
 <script>
-    function enable() {
-        var check = document.getElementById("tandc");
-        var btn = document.getElementById("btn");
-        if (check.checked) {
-        btn.removeAttribute("disabled");
-        } else {
-        btn.disabled = "true";
-        }
-        }
+    function enableOne() {
+        var check = document.getElementById("tandc1");
+        var btn = document.getElementById("btnOne");
+            if (check.checked) {
+                btn.removeAttribute("disabled");
+                } else {
+            btn.disabled = "true";
+            }
+    }
+
+    function enableTwo() {
+        var check = document.getElementById("tandc2");
+        var btn = document.getElementById("btnTwo");
+            if (check.checked) {
+                btn.removeAttribute("disabled");
+                } else {
+            btn.disabled = "true";
+            }
+    }
+
+    function enableThree() {
+        var check = document.getElementById("tandc3");
+        var btn = document.getElementById("btnThree");
+            if (check.checked) {
+                btn.removeAttribute("disabled");
+                } else {
+            btn.disabled = "true";
+            }
+    }
 
 </script>
 </html>

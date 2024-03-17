@@ -18,26 +18,26 @@
           <div class="row1">
           <div class="input-box">
           <label for="firstName">First Name:</label>
-          <input type="text" id="firstName" placeholder="First Name" th:field="${customer.firstname}" >
+          <input type="text" id="firstName" placeholder="First Name" required th:field="${customer.firstname}" >
         </div>
 
 
         <div class="input-box">
           <label for="lastName">Last Name:</label>
-          <input type="text" id="lastName" placeholder="Last Name" th:field="${customer.lastname}">
+          <input type="text" id="lastName" placeholder="Last Name" required th:field="${customer.lastname}">
         </div>
           </div>
 
           <div class="row2">
           <div class="input-box">
           <label for="address">Address:</label>
-          <input type="text" id="address" placeholder="Address" th:field="${customer.address}">
+          <input type="text" id="address" placeholder="Address" required th:field="${customer.address}">
         </div>
 
 
         <div class="input-box">
           <label for="email">Email:</label>
-          <input type="text" id="Email" placeholder="Email" th:field="${customer.Email}">
+          <input type="text" id="email" placeholder="Email" required th:field="${customer.email}">
         </div>
         </div>
 
@@ -46,20 +46,16 @@
         <h3 class="title2">Grant Requirements</h3>
 
           <div class="req-name">Impactful Project:</div>
-          <input type="checkbox" id="Req1" name="Req1"/>
-          <label for="Req1"style="color: #f2f3f4">Show how your project tackles climate change or sustainability.</label>
-
-
+          <input type="checkbox" id="requirementOne" name="requirementOne" th:field="${customer.requirementOne}"/>
+          <label for="requirementOne"style="color: #f2f3f4">Show how your project tackles climate change or sustainability.</label>
 
           <div class="req-name">Innovative Approach:</div>
-          <input type="checkbox" id="Req2" name="Req2"/>
-          <label for="Req2" style="color: #f2f3f4"> Use creative solutions or tech to address environmental challenges.</label>
-
-
+          <input type="checkbox" id="requirementTwo" name="requirementTwo" th:field="${customer.requirementTwo}"/>
+          <label for="requirementTwo" style="color: #f2f3f4"> Use creative solutions or tech to address environmental challenges.</label>
 
           <div class="req-name">Community Involvement:</div>
-          <input type="checkbox" id="Req3" name="Req3"/>
-          <label for="Req3" style="color: #f2f3f4">Engage communities for collective environmental action.</label>
+          <input type="checkbox" id="requirementThree" name="requirementThree" th:field="${customer.requirementThree}"/>
+          <label for="requirementThree" style="color: #f2f3f4">Engage communities for collective environmental action.</label>
 
         <button type="submit" class="btn btn-secondary btn-sm btn-block" role="button" ><span class="button-text">Submit</span></button>
       </form>
