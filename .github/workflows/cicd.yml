@@ -1,0 +1,55 @@
+name: CICD
+
+on:
+  pull_request:
+    branches:  [ "main" ]
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Build with Maven
+        run: |
+              mvn -f Global-Green-Initiative/pom.xml clean install
+              cd Global-Green-Initiative
+              mkdir artifacts && cp target/*.jar artifacts
+              ls
+              pwd
+      - name: Save artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: github-action-artifact
+            path: ${{ github.workspace }}/Global-Green-Initiative/artifacts/
+      - name: Login to docker hub
+        uses: docker/login-action@v3
+        with:
+            username: ${{ secrets.DOCKER_HUB_USERNAME_NEW }}
+            password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+      - name: Set up Docker Build
+        uses: docker/setup-buildx-action@v3
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+            context: .
+            file: ./Dockerfile
+            push: true
+            tags: l00186464/global-green-initiative:latest
+
+  deploy:
+    needs: build
+    runs-on: [aws-ec2]
+    steps:
+      - name: Pull image from docker hub
+        run: sudo docker pull l00186464/global-green-initiative:latest
+      - name: Remove old container
+        run: sudo docker rm -f global-green-initiative-container
+      - name: Run docker container
+        run: sudo docker run -d -p 8080:8080 --name global-green-initiative-container l00186464/global-green-initiative
