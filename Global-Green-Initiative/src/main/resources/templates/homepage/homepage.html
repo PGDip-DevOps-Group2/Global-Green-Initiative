@@ -15,12 +15,12 @@
   <form action="#" th:object="${homepage}" > <!-- class="col-md-6 offset-md-3" -->
     <div class="jumbotron wrapper" id="group">
       <!--  <div class="jumbotron "> blue-box -->
-      <h1 class="display-3 cursive-text">Group 2</h1>
-      <p class="lead">Nausicaä’s Global Green Initiative</p>
-      <hr class="my-4">
-      <p>An online application system for range of grants to support climate change initiatives. This is part of Studio Ghibli’s sustainable planet goals.</p>
+      <h1 class="display-3">Nausicaä’s Global <span class="green">Green</span> Initiative</h1>
+      <div class="text">
+      <p>Welcome to Nausicaä’s Global Green Initiative by Studio Ghibli. We're dedicated to supporting climate change initiatives worldwide. Through grants, we empower individuals and communities to create a greener, healthier future. Join us in making a difference today.</p>
+      </div>
       <div class="move">
-      <a class="btn btn-primary btn-lg" th:href="@{/grants/new}" role="button" >Apply</a>
+      <a class="btn btn-secondary btn-md btn-block" th:href="@{/grants/new}" role="button" ><span class="button-text">Apply</span></a>
       </div>
     </div>
   </form>

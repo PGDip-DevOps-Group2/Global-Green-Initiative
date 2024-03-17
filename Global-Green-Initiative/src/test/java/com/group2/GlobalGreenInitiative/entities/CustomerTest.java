@@ -17,7 +17,6 @@ class CustomerTest {
         customer.setLastname("Doe");
         customer.setAddress("123 Main St");
         customer.setEmail("john.doe@example.com");
-        customer.setDOB("2000-01-01");
 
         // Assert
         assertEquals(1L, customer.getProjectId());
@@ -25,19 +24,19 @@ class CustomerTest {
         assertEquals("Doe", customer.getLastname());
         assertEquals("123 Main St", customer.getAddress());
         assertEquals("john.doe@example.com", customer.getEmail());
-        assertEquals("2000-01-01", customer.getDOB());
+
     }
 
     @Test
     void testParameterizedConstructor() {
         // Arrange
-        Customer customer = new Customer("John", "Doe", "123 Main St", "john.doe@example.com", "2000-01-01");
+        Customer customer = new Customer("John", "Doe", "123 Main St", "john.doe@example.com");
 
         // Assert
         assertEquals("John", customer.getFirstname());
         assertEquals("Doe", customer.getLastname());
         assertEquals("123 Main St", customer.getAddress());
         assertEquals("john.doe@example.com", customer.getEmail());
-        assertEquals("2000-01-01", customer.getDOB());
+
     }
 }
