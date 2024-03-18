@@ -71,9 +71,13 @@ public class Customer {
         return aGrant;
     }
 
+
+    //This is never used and affecting unit test reporting
+
+    /*
     public String email() {
         return email;
-    }
+    }*/
 
     public boolean getRequirementOne() {
         return requirementOne;

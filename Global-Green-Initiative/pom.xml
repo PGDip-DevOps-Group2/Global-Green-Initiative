@@ -92,6 +92,12 @@
 				</goals>
 				</execution>
 			</executions>
+				<configuration>
+					<excludes>
+						<exclude>com/group2/GlobalGreenInitiative/GlobalGreenInitiativeApplicationTests.class</exclude>
+						<exclude>com/group2/GlobalGreenInitiative/GlobalGreenInitiativeApplication.class</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 
 		</plugins>
