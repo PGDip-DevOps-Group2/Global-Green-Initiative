@@ -26,4 +26,5 @@ jobs:
     - run: chrome --version
      
     - name: Build with Maven
-      run: mvn -B clean test
+      run:  ls
+            mvn -B clean test
