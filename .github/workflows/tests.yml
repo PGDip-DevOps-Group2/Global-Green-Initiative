@@ -28,4 +28,6 @@ jobs:
     - name: Build with Maven
       run: |
             ls
+            cd GlobalGreenInitiative-UIAuto
+            ls
             mvn -B clean test
