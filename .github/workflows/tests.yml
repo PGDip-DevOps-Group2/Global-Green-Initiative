@@ -30,5 +30,4 @@ jobs:
             ls
             cd GlobalGreenInitiative-UIAuto
             ls
-            mvn clean install
             mvn clean test
