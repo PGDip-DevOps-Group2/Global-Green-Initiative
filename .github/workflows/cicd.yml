@@ -67,3 +67,31 @@ jobs:
         run: sudo docker rm -f global-green-initiative-container
       - name: Run docker container
         run: sudo docker run -d --restart always -p 8080:8080 --name global-green-initiative-container l00186464/global-green-initiative
+
+  test:
+    needs: deploy
+
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - name: Check out UI repo
+      uses: actions/checkout@master
+      with:
+          repository: PGDip-DevOps-Group2/Global-Green-Initiative-UiAutomation
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+     
+    - uses: browser-actions/setup-chrome@v1
+      with:
+          chrome-version: 123
+     
+    - name: Build with Maven
+      run: |
+            ls
+            cd GlobalGreenInitiative-UIAuto
+            ls
+            mvn clean install
+            mvn clean test
