@@ -20,7 +20,6 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: maven
      
     - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
@@ -31,4 +30,9 @@ jobs:
             cd GlobalGreenInitiative-UIAuto
             ls
             mvn clean install
-            mvn clean test
+
+    - run: mkdir staging && cp target/*.jar staging
+    - uses: actions/upload-artifact@v4
+      with:
+          name: Package
+          path: staging
