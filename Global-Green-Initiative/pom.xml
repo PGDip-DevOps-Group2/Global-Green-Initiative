@@ -12,7 +12,7 @@
 	<artifactId>Global-Green-Initiative</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Global-Green-Initiative</name>
-	<description>Group 2&apos;s Project for DevOps Assignment Global Green Initiative</description>
+	<description>Group 2's Project for DevOps Assignment Global Green Initiative</description>
 	<properties>
 		<java.version>17</java.version> 
 		<sonar.organization>pgdip-devops-group2</sonar.organization>
@@ -65,7 +65,7 @@
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-			<version>2.4.0</version>
+			<version>2.5.0</version>
 		</dependency>
 
 	</dependencies>
