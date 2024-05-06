@@ -12,7 +12,7 @@
 	<artifactId>Global-Green-Initiative</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Global-Green-Initiative</name>
-	<description>Group 2&apos;s Project for DevOps Assignment Global Green Initiative</description>
+	<description>Group 2's Project for DevOps Assignment Global Green Initiative</description>
 	<properties>
 		<java.version>17</java.version> 
 		<sonar.organization>pgdip-devops-group2</sonar.organization>
@@ -42,7 +42,7 @@
 		<dependency>
     			<groupId>org.springframework</groupId>
     			<artifactId>spring-web</artifactId>
-    			<version>6.1.5</version>
+    			<version>6.1.6</version>
 		</dependency>
 
 		<dependency>
